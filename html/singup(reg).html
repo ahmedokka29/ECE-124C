@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sign up - تسجيل الدخول</title>
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/singup(reg).css">
+    <link rel="stylesheet" href="../css/index.css">
+
+
+
+    <script type="text/javascript">
+
+        function validation(form) {
+            //            if (form.f_name.value == "") {
+            //                alert("Error: Username cannot be blank!");
+            //                form.f_name.focus();
+            //                return false;
+            //            }
+            //            re = /^\w+$/;
+            //            if (!re.test(form.f_name.value)) {
+            //                alert("Error: Username must contain only letters, numbers and underscores!");
+            //                form.f_name.focus();
+            //                return false;
+            //            }
+
+            if (form.pass.value != "" && form.pass.value == form.c_pass.value) {
+
+                re = /[0-9]/;
+                if (!re.test(form.pass.value)) {
+                    alert("Error: password must contain at least one number (0-9)!");
+                    form.pass.focus();
+                    return false;
+                }
+                re = /[^\d\sA-z]/;
+                if (!re.test(form.pass.value)) {
+                    alert("Error: password must contain at least one special character (-=+%&!)!");
+                    form.pass.focus();
+                    return false;
+                }
+                re = /[a-z]/;
+                if (!re.test(form.pass.value)) {
+                    alert("Error: password must contain at least one lowercase letter (a-z)!");
+                    form.pass.focus();
+                    return false;
+                }
+                re = /[A-Z]/;
+                if (!re.test(form.pass.value)) {
+                    alert("Error: password must contain at least one uppercase letter (A-Z)!");
+                    form.pass.focus();
+                    return false;
+                }
+            } else {
+                alert("Error: Please check that you've entered and confirmed your password!");
+                form.pass.focus();
+                return false;
+            }
+
+            alert("You entered a valid password: " + form.pass.value);
+            return true;
+        }
+    </script>
+
+</head>
+
+<body>
+    <div class="content">
+
+        <header class="theme_header">
+            <a href="../index.html">
+                <h1>Cooking For Men - الطبخ للجدعان</h1>
+            </a>
+        </header>
+
+        <nav class="theme_nav">
+            <ul>
+                <li><a href="b-d.html">Breakfast and Dinner - فطار و عشاء</a></li>
+                <li><a href="straches.html">Starches - نشويات</a></li>
+                <li><a href="m-c.html">Meat and Chickens - لحوم و فراخ</a></li>
+                <li><a href="singup(reg).html">Sign up - تسجيل جديد</a></li>
+            </ul>
+        </nav>
+
+        <form name="form" method="POST" onsubmit="return validation(this);">
+            <fieldset>
+                <legend>Register</legend>
+                <p>Please complete the form to join El-Ged3an</p>
+
+
+
+                <label>First Name</label>
+                <input type="text" name="f_name" placeholder="Enter your First name" maxlength="12" 
+                     required>
+
+                <label>Last name</label>
+                <input type="text" name="l_name" placeholder="Enter your Last name" maxlength="12" 
+                     required>
+
+                <label>Address</label>
+                <input type="text" placeholder="Enter Address" required>
+
+                <label>E-mail</label>
+                <input type="email" name="e-mail" placeholder="Enter your E-mail"
+                    pattern="[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+" required>
+
+
+                <label>Password</label>
+                <input type="password" placeholder="Enter Password" name="pass" pattern="^[A-Z]{1}[\w\S]{7}$" title="• the password must start with uppercase character.
+                   • the password must include 8 characters no more no less.
+                   • the password must include one digit at least.
+                   • the password must include one special character like - , #, &, and *.
+                   • No white spaces allowed in the password" minlength="8" maxlength="8" required>
+
+                <label>Confirm Password</label>
+                <input type="password" placeholder="Confirm Password" name="c_pass" pattern="^[A-Z]{1}[\w\S]{7}$" title="• the password must start with uppercase character.
+                   • the password must include 8 characters no more no less.
+                   • the password must include one digit at least.
+                   • the password must include one special character like - , #, &, and *.
+                   • No white spaces allowed in the password" minlength="8" maxlength="8" required>
+
+
+                <label>Birth Day</label>
+                <input type="date" required>
+
+
+                <label>Mobile Phone Number</label>
+
+                <input type="tel" placeholder="Enter your phone number" name="phone" pattern="[0]\d{10}"
+                    title="Number must be 11 digit : 0##########" maxlength="11" minlength="11" required>
+
+
+                <label>Gender</label>
+                <input type="radio" value="male" name="gender" required>male<br>
+                <input type="radio" value="female" name="gender">female
+                <hr>
+
+
+                <input type="submit" value="Sign up">
+            </fieldset>
+
+        </form>
+    </div>
+    <footer class="theme_footer">
+
+        <div class="f_TableCell">
+            <ul class="contact">
+                <li class="contact"><a href="https://www.facebook.com/"> <img class="contact_icon"
+                            title="Facebook" src="../photos/1x/Asset%202.png" alt="Facebook Link"
+                            width="20%" /></a></li>
+                <li class="contact"><a href="https://www.instgram.com/"> <img class="contact_icon"
+                            title="Instgram" src="../photos/1x/Asset%201.png" alt="Instgram Link"
+                            width="20%" /></a></li>
+                <li class="contact"><a href="https://www.twitter.com/"> <img class="contact_icon"
+                            title="Twitter" src="../photos/1x/Asset%203.png" alt="Twitter Link"
+                            width="20%" /></a></li>
+                <li class="contact"><a href="https://www.whatsapp.com/"> <img class="contact_icon"
+                            title="Whatsapp" src="../photos/1x/Asset%204.png" alt="Whatsapp Link"
+                            width="20%" /></a></li>
+            </ul>
+        </div>
+        <div class="f_TableCell">Copyright 2020 &copy; All Right Reserved</div>
+
+</footer>
+
+</body>
+
+</html>

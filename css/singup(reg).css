@@ -1,0 +1,87 @@
+
+        fieldset {
+            padding: 20px;
+            margin: 20px auto;
+            width: 33%;
+            border: 3px solid dodgerblue;
+            background-color: rgba(53, 53, 53, 0.5);
+            color: azure;
+
+        }
+        
+        legend {
+            padding: 10px;
+            border: 1.5px dashed azure;
+            color: dodgerblue;
+            font-size: 25px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            background-color: rgba(53, 53, 53,0.5);
+            
+        }
+        
+
+        label {
+            margin-bottom: 10px;
+            display: block;
+            padding: 5px;
+
+        }
+
+        input {
+            margin-bottom: 10px;
+            border-radius: 7px;
+            border: none;
+            padding: 10px;
+
+        }
+
+        input[type="text"],
+        input[type="password"],
+        input[type="email"],
+        input[type="date"],
+        input[type="tel"] {
+            box-sizing: border-box;
+            display: block;
+            width: 100%;
+        }
+
+        hr {
+            width: 75%;
+            margin: 5px auto;
+        
+            border: 1.5px solid azure ;
+        }
+
+        input[type="submit"] {
+            background-color: dodgerblue;
+            color: azure;
+            display: block;
+            width: 100%;
+            margin:0;
+            padding: 8px;
+            outline: none;
+            font-size: large;
+        }
+
+        p {
+            margin-bottom: 20px;
+            font-size: 20px;
+            text-align: center;}
+
+        input[type="submit"]:hover
+        {
+            background-color: purple;
+        }
+
+       fieldset:hover{
+        border: 3px solid purple;
+       }
+
+       legend:hover{
+           color: purple;
+           background-color: rgba(240, 255, 255,0.5);
+       }
+
+        
+
